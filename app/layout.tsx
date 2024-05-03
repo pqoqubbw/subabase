@@ -3,16 +3,12 @@ import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 import './globals.css';
 import Script from 'next/script';
+import Head from 'next/head';
 
 export const metadata: Metadata = {
   title: 'Supabase | The Open Source Firebase Alternative',
   description:
     'Build production-grade applications with a Postgres database, Authentication, instant APIs, Realtime, Functions, Storage and Vector embeddings. Start for free.',
-  openGraph: {
-    url: 'https://supabase.com/images/og/og-image-v2.jpg',
-    title: 'Supabase | The Open Source Firebase Alternative',
-    siteName: 'Supabase',
-  },
 };
 
 export default function RootLayout({
@@ -22,6 +18,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta
+          property="og:image"
+          content={`https://supabase.com/docs/img/supabase-og-image.png`}
+        />
+        <meta
+          name="twitter:image"
+          content={`https://supabase.com/docs/img/supabase-og-image.png`}
+        />
+      </Head>
       <body className={`${GeistSans.variable} ${GeistMono.variable}`}>
         {children}
       </body>
