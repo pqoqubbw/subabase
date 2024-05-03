@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 import './globals.css';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'Supabase | The Open Source Firebase Alternative',
@@ -24,6 +25,11 @@ export default function RootLayout({
       <body className={`${GeistSans.variable} ${GeistMono.variable}`}>
         {children}
       </body>
+      <Script
+        defer
+        src="https://us.umami.is/script.js"
+        data-website-id="626750fe-b1b7-40ba-a7a6-d2257b3fa47c"
+      />
     </html>
   );
 }
