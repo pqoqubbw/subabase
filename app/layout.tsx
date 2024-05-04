@@ -30,6 +30,10 @@ export default function RootLayout({
         src="https://us.umami.is/script.js"
         data-website-id="626750fe-b1b7-40ba-a7a6-d2257b3fa47c"
       />
+      <Script
+        defer
+        data-domain="subabase.com" src="https://plausible.io/js/script.js"
+      />
     </html>
   );
 }
