@@ -34,6 +34,11 @@ export default function RootLayout({
         src="https://us.umami.is/script.js"
         data-website-id="626750fe-b1b7-40ba-a7a6-d2257b3fa47c"
       />
+      <Script
+        async
+        defer
+        src="https://scripts.simpleanalyticscdn.com/latest.js"
+      />
     </html>
   );
 }
